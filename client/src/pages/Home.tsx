@@ -1,12 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card3D } from '@/components/Card3D';
+import { BlackFridayCounter } from '@/components/BlackFridayCounter';
 import { useState } from 'react';
 import { apiRequest } from '@/lib/api';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '@/components/LanguageSelector';
 
-const KIWIFY_LINK = 'https://pay.kiwify.com.br/pRA6NfD';
+const KIWIFY_LINK = 'https://pay.kiwify.com.br/NomtmUP';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -25,16 +26,21 @@ export default function Home() {
     setIsSubmitting(true);
 
     try {
-      const response = await apiRequest('/backend/capture-lead', {
+      const response = await fetch('/api/save-lead.php', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(leadData)
       });
+      
+      const result = await response.json();
 
-      if (response.success) {
+      if (result.success) {
         alert(t('home.lead_form.success'));
         setLeadData({ name: '', email: '', whatsapp: '' });
       } else {
-        alert(response.error || t('home.lead_form.error_submit'));
+        alert(result.message || t('home.lead_form.error_submit'));
       }
     } catch (error) {
       console.error('Erro ao capturar lead:', error);
@@ -314,38 +320,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Preço */}
-      <section id="preco" className="py-20">
-        <div className="container mx-auto px-6 md:px-8">
-          <h2 className="font-display text-xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {t('home.pricing_section.title')}
+      {/* Preço - Black Friday */}
+      <section id="preco" className="py-20 relative overflow-hidden">
+        {/* Background effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/5 via-orange-500/5 to-transparent pointer-events-none" />
+        
+        <div className="container mx-auto px-6 md:px-8 relative z-10">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+            🔥 BLACK FRIDAY ANTECIPADA 2025 🔥
           </h2>
+          <p className="text-center text-xl text-gray-300 mb-2">
+            Lançamento Especial - Começa dia 10 de Novembro
+          </p>
+          <p className="text-center text-lg text-purple-400 mb-12 font-semibold">
+            🎁 As 100 primeiras pessoas ganham TTS Emotion GRÁTIS!
+          </p>
 
-          <Card3D className="card-pricing max-w-2xl mx-auto p-8 bg-card border border-primary/30 rounded-lg">
-            <div className="text-center mb-6">
-              <div className="text-6xl font-bold text-primary mb-2">{t('home.pricing_section.price')}</div>
-              <p className="text-foreground">{t('home.pricing_section.price_desc')}</p>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <Card3D className="card-pricing p-8 bg-gradient-to-br from-gray-900 via-black to-gray-900 border-2 border-yellow-500/50 rounded-2xl shadow-2xl shadow-yellow-500/20">
+              
+              {/* Black Friday Counter */}
+              <div className="mb-8">
+                <BlackFridayCounter />
+              </div>
 
-            <ul className="space-y-3 mb-8">
-              {(t('home.pricing_features', { returnObjects: true }) as string[]).map((item: string, i: number) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>{item}</span>
+              {/* Preços */}
+              <div className="text-center mb-8 p-6 bg-black/50 rounded-xl border border-yellow-500/30">
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <div className="text-gray-500">
+                    <p className="text-sm font-semibold mb-1">De:</p>
+                    <p className="text-3xl md:text-4xl font-bold line-through">R$ 397</p>
+                  </div>
+                  <div className="text-6xl">→</div>
+                  <div>
+                    <p className="text-sm font-semibold mb-1 text-yellow-400">Por apenas:</p>
+                    <p className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                      R$ 247
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-full font-bold text-lg">
+                  💰 ECONOMIZE R$ 150 (38% OFF)
+                </div>
+                
+                <p className="text-gray-400 mt-4 text-sm">
+                  Pagamento único • Sem mensalidades • Acesso vitalício
+                </p>
+              </div>
+
+              {/* Features */}
+              <ul className="space-y-3 mb-8 bg-black/30 p-6 rounded-xl border border-gray-700">
+                {/* Bônus TTS Emotion em destaque */}
+                <li className="flex items-start gap-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-3 rounded-lg border border-purple-500/30">
+                  <span className="text-purple-400 mt-1 text-xl">🎁</span>
+                  <span className="text-white font-bold">BÔNUS: TTS Emotion - IA de Voz com Emoções (Valor R$ 297) - GRÁTIS para as 100 primeiras pessoas!</span>
                 </li>
-              ))}
-            </ul>
+                {(t('home.pricing_features', { returnObjects: true }) as string[]).map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1 text-xl">✓</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
 
-            <Button size="lg" className="btn-buy w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href={KIWIFY_LINK} target="_blank" rel="noopener noreferrer">
-                {t('home.pricing_section.buy_button')}
-              </a>
-            </Button>
+              {/* CTA Button */}
+              <Button 
+                size="lg" 
+                className="w-full h-16 text-xl font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-400 hover:via-orange-400 hover:to-red-400 text-black shadow-lg shadow-yellow-500/50 hover:shadow-yellow-500/70 transition-all duration-300 hover:scale-105 animate-pulse"
+                asChild
+              >
+                <a href={KIWIFY_LINK} target="_blank" rel="noopener noreferrer">
+                  🔥 {t('home.pricing_section.buy_button')} 🔥
+                </a>
+              </Button>
 
-            <p className="text-center text-xs text-foreground mt-4">
-              {t('home.pricing_section.guarantee')}
-            </p>
-          </Card3D>
+              {/* Garantia e Social Proof */}
+              <div className="mt-6 space-y-3">
+                <p className="text-center text-sm text-gray-400">
+                  🔒 {t('home.pricing_section.guarantee')}
+                </p>
+                
+                <div className="flex items-center justify-center gap-2 text-sm text-green-400">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-semibold">Compra 100% segura e protegida</span>
+                </div>
+
+                <div className="text-center text-xs text-gray-500 italic">
+                  ⚡ Oferta de lançamento válida a partir de 10 de Novembro ou até esgotar as 100 vagas
+                </div>
+                
+                <div className="text-center mt-3 p-3 bg-purple-500/10 border border-purple-500/30 rounded-lg">
+                  <p className="text-sm text-purple-300 font-semibold">
+                    🎁 Garanta seu bônus TTS Emotion (R$ 297) totalmente GRÁTIS!
+                  </p>
+                  <p className="text-xs text-gray-400 mt-1">
+                    Apenas as 100 primeiras pessoas terão acesso a este bônus exclusivo
+                  </p>
+                </div>
+              </div>
+            </Card3D>
+          </div>
         </div>
       </section>
 
@@ -458,9 +535,9 @@ export default function Home() {
                 {t('home.footer.copyright')}
               </div>
               <div className="flex gap-6">
-                <a href="#" className="hover:text-primary transition-colors">{t('home.footer.terms')}</a>
-                <a href="#" className="hover:text-primary transition-colors">{t('home.footer.privacy')}</a>
-                <a href="#" className="hover:text-primary transition-colors">{t('home.footer.refund')}</a>
+                <a href="/legal/termos-de-uso.md" target="_blank" className="hover:text-primary transition-colors">{t('home.footer.terms')}</a>
+                <a href="/legal/politica-de-privacidade.md" target="_blank" className="hover:text-primary transition-colors">{t('home.footer.privacy')}</a>
+                <a href="/legal/politica-de-reembolso.md" target="_blank" className="hover:text-primary transition-colors">{t('home.footer.refund')}</a>
               </div>
               <div>
                 {t('home.footer.developed_by')} <span className="text-primary">Isaac Santana</span> — Connect Tribe

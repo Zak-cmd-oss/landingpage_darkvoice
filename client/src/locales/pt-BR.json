@@ -132,7 +132,7 @@
     },
     "pricing_section": {
       "title": "Sem plano mensal e preço único",
-      "price": "R$ 297",
+      "price": "R$ 397",
       "price_desc": "Pagamento único • Sem mensalidades",
       "features": [
         "Pague uma única vez e use sem limites",
@@ -142,7 +142,7 @@
         "Sem assinatura, sem cobranças recorrentes",
         "Atualizações inclusas"
       ],
-      "buy_button": "Comprar por R$ 297",
+      "buy_button": "GARANTIR VAGA POR R$ 247",
       "guarantee": "Compra segura pela Kiwify • Garantia de 7 dias"
     },
     "pricing_features": [
@@ -154,7 +154,7 @@
       "Atualizações inclusas"
     ],
     "requirements_section": {
-      "title": "Requisitos mínimos",
+      "title": "Requisitos mínimos recomendados",
       "system": "Sistema",
       "system_value": "Windows 10/11",
       "cpu": "CPU",
@@ -193,11 +193,11 @@
     "adv3_title": "Privacidade total",
     "adv3_desc": "Arquivos e dados não são enviados",
     "pricing_title": "Sem plano mensal e preço único",
-    "price": "R$ 297",
+    "price": "R$ 397",
     "price_desc": "Pagamento único • Sem mensalidades",
     "buy_button": "Quero ter o DarkVoice",
     "guarantee": "Compra segura com garantia de 7 dias",
-    "requirements_title": "Requisitos mínimos",
+    "requirements_title": "Requisitos mínimos recomendados",
     "req_os": "Windows 10/11",
     "req_cpu": "Quad-core 64-bit",
     "req_gpu": "NVIDIA CUDA Core (GTX 1060 ou superior)",
