@@ -22,7 +22,7 @@ function getWelcomeEmailTemplate($nome) {
                     <!-- Header com Logo -->
                     <tr>
                         <td align="center" style="padding: 40px 20px 20px;">
-                            <img src="https://darkvoice.com/logo.png" alt="DarkVoice" width="120" height="120" style="border-radius: 20px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);">
+                            <img src="https://criandocomisaac.com/logo.png" alt="DarkVoice" width="120" height="120" style="border-radius: 20px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);">
                         </td>
                     </tr>
                     

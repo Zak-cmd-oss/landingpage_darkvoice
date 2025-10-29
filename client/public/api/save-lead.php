@@ -79,15 +79,15 @@ try {
     
     $stmt->execute([$nome, $email, $whatsapp]);
     
-    // Enviar email de boas-vindas
-    $emailSent = sendWelcomeEmail($nome, $email);
+    // Enviar email de boas-vindas via Resend
+    $emailResult = sendWelcomeEmail($nome, $email);
     
     // Resposta de sucesso
     http_response_code(201);
     echo json_encode([
         'success' => true,
         'message' => 'Lead cadastrado com sucesso!',
-        'email_sent' => $emailSent,
+        'email_sent' => $emailResult['success'],
         'data' => [
             'id' => $pdo->lastInsertId(),
             'nome' => $nome,
@@ -105,32 +105,12 @@ try {
 }
 
 /**
- * Enviar email de boas-vindas
+ * Enviar email de boas-vindas via Resend API
  */
 function sendWelcomeEmail($nome, $email) {
-    // Se não tiver SMTP configurado, retorna false
-    if (empty(SMTP_PASS)) {
-        return false;
-    }
-    
     $subject = '🎉 Bem-vindo ao DarkVoice - Black Friday Antecipada 2025!';
     $htmlBody = getWelcomeEmailTemplate($nome);
     
-    // Headers do email
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . SMTP_FROM_NAME . ' <' . SMTP_FROM_EMAIL . '>',
-        'Reply-To: ' . SMTP_FROM_EMAIL,
-        'X-Mailer: PHP/' . phpversion()
-    ];
-    
-    // Enviar email
-    try {
-        $sent = mail($email, $subject, $htmlBody, implode("\r\n", $headers));
-        return $sent;
-    } catch (Exception $e) {
-        error_log('Erro ao enviar email: ' . $e->getMessage());
-        return false;
-    }
+    // Enviar via Resend API
+    return sendEmailViaResend($email, $subject, $htmlBody, $nome);
 }
