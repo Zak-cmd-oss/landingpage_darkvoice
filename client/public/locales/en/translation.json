@@ -1,0 +1,101 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "home": {
+    "header": {
+      "login": "Login",
+      "buy_now": "Buy Now"
+    },
+    "nav": {
+      "how_it_works": "How it works",
+      "advantages": "Advantages",
+      "testimonials": "Testimonials",
+      "pricing": "Pricing",
+      "requirements": "Requirements"
+    },
+    "hero": {
+      "title_part1": "Fully Local",
+      "title_highlight1": "Voice Cloning",
+      "title_part2": "AI",
+      "title_highlight2": "Solution",
+      "description": "Create realistic text-to-speech (TTS) narrations using your own voice or clone other people's voices with AI. Everything processed locally, no subscriptions, with total privacy."
+    },
+    "hero_title": "Fully Local Voice Cloning AI",
+    "hero_description": "Create realistic text-to-speech (TTS) narrations using your own voice or clone other people's voices with AI. Everything processed locally, no subscriptions, with total privacy.",
+    "cta_button": "Get my KVM",
+    "cta_secondary": "Try Now",
+    "how_it_works": "How it works",
+    "step1_title": "Record voice",
+    "step1_desc": "Use high-quality audio for training",
+    "step2_title": "Clone with local AI",
+    "step2_desc": "Process on ChatGPT with total privacy",
+    "step3_title": "Narrate scripts (TTS)",
+    "step3_desc": "Use custom models for your narrations",
+    "advantages_title": "DarkVoice Advantages",
+    "adv1_title": "No monthly fees",
+    "adv1_desc": "Clone and use, no usage limits",
+    "adv2_title": "100% fully local",
+    "adv2_desc": "Nothing leaves your computer",
+    "adv3_title": "Total privacy",
+    "adv3_desc": "Files and data are not sent",
+    "pricing_title": "No monthly plan and one-time price",
+    "price": "$297",
+    "price_desc": "One-time payment • No subscriptions",
+    "buy_button": "Get DarkVoice",
+    "guarantee": "Secure purchase with 7-day guarantee",
+    "requirements_title": "Minimum requirements",
+    "req_os": "Windows 10/11",
+    "req_cpu": "Quad-core 64-bit",
+    "req_gpu": "NVIDIA CUDA Core (GTX 1060 or higher)",
+    "req_ram": "8GB (minimum)",
+    "req_storage": "10GB (minimum)"
+  },
+  "login": {
+    "title": "Access DarkVoice",
+    "subtitle": "Enter your credentials",
+    "email_placeholder": "youremail@example.com",
+    "password_placeholder": "••••••••",
+    "button": "Login",
+    "forgot_password": "Forgot your password?",
+    "back_to_home": "Back to homepage",
+    "error": "Invalid email or password",
+    "success": "Login successful!"
+  },
+  "recover": {
+    "title": "Password Recovery",
+    "subtitle": "Enter your email to receive recovery instructions",
+    "email_placeholder": "youremail@example.com",
+    "button": "Send Instructions",
+    "back_to_login": "Back to login",
+    "success": "Instructions sent to your email!",
+    "error": "Error sending instructions"
+  },
+  "change_password": {
+    "title": "Create Your Permanent Password",
+    "subtitle": "You are using a temporary password. Please create a permanent password to continue.",
+    "new_password": "New Password",
+    "confirm_password": "Confirm Password",
+    "button": "Change Password",
+    "requirements": "Minimum 8 characters",
+    "error_match": "Passwords do not match",
+    "error_length": "Password must have at least 8 characters",
+    "success": "Password changed successfully!"
+  }
+}
+

@@ -1,0 +1,273 @@
+{
+  "common": {
+    "welcome": "Bem-vindo",
+    "login": "Entrar",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "name": "Nome",
+    "loading": "Carregando...",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar"
+  },
+  "home": {
+    "header": {
+      "login": "Acessar",
+      "buy_now": "Comprar Agora"
+    },
+    "nav": {
+      "how_it_works": "Como funciona",
+      "advantages": "Vantagens",
+      "testimonials": "Depoimentos",
+      "pricing": "Preço",
+      "requirements": "Requisitos"
+    },
+    "hero": {
+      "title_part1": "IA de",
+      "title_highlight1": "Clonagem de Voz",
+      "title_part2": "totalmente",
+      "title_highlight2": "local",
+      "description": "Crie narrações com texto para voz (TTS) realistas utilizando sua própria voz ou clone vozes de outras pessoas com IA. Tudo processado localmente, sem mensalidades, com privacidade total.",
+      "feature1": "Grave seu WAV — Email — Voz clonada",
+      "feature2": "Clone vozes similares — Gere narrações",
+      "cta_primary": "Adquirir Agora",
+      "cta_secondary": "Testar Agora"
+    },
+    "lead_form": {
+      "title": "Receba Novidades",
+      "subtitle": "Deixe seus dados e receba atualizações sobre o DarkVoice",
+      "name_label": "Seu nome",
+      "name_placeholder": "Digite seu nome completo",
+      "email_label": "Seu e-mail",
+      "email_placeholder": "seuemail@exemplo.com",
+      "whatsapp_label": "Seu WhatsApp",
+      "whatsapp_placeholder": "(00) 00000-0000",
+      "submit_button": "Quero receber novidades",
+      "social_title": "Ou siga nas redes:",
+      "success": "🎉 Cadastro realizado! Verifique seu email para confirmar.",
+      "error_fields": "⚠️ Por favor, preencha nome e email.",
+      "error_submit": "⚠️ Erro ao cadastrar. Tente novamente."
+    },
+    "hero_title": "IA de Clonagem de Voz totalmente local",
+    "hero_description": "Crie narrações com texto para voz (TTS) realistas utilizando sua própria voz ou clone vozes de outras pessoas com IA. Tudo processado localmente, sem mensalidades, com privacidade total.",
+    "cta_button": "Quero meu KVM",
+    "cta_secondary": "Testar Agora",
+    "how_it_works_section": {
+      "title": "Como funciona",
+      "step1_title": "Gravar voz",
+      "step1_desc": "Use seu WAV com qualidade ideal para treinamento.",
+      "step2_title": "Clonar com IA local",
+      "step2_desc": "Processe via ChatGPT com total privacidade.",
+      "step3_title": "Narrar roteiros (TTS)",
+      "step3_desc": "Use modelos personalizados para suas narrações."
+    },
+    "advantages_section": {
+      "title": "Vantagens do DarkVoice",
+      "adv1_title": "Sem mensalidades",
+      "adv1_desc": "Clone e use, sem limites de uso.",
+      "adv2_title": "100% totalmente local",
+      "adv2_desc": "Nada sai do seu computador.",
+      "adv3_title": "Privacidade total",
+      "adv3_desc": "Arquivos e dados não são enviados."
+    },
+    "how_it_works": "Como funciona",
+    "step1_title": "Gravar voz",
+    "step1_desc": "Use áudio com qualidade ideal para treinamento",
+    "step2_title": "Clonar com IA local",
+    "step2_desc": "Processe na ChatGPT com total privacidade",
+    "step3_title": "Narrar roteiros (TTS)",
+    "step3_desc": "Use modelos personalizados para suas narrações",
+    "testimonials_section": {
+      "title": "Depoimentos",
+      "subtitle": "Os melhores criadores usam DarkVoice para qualidade superior de voz",
+      "test_button": "Testar também",
+      "testimonials": [
+        {
+          "name": "PL",
+          "username": "@paola",
+          "platform": "YouTube",
+          "text": "Incrível! Consegui criar narrações profissionais para meus vídeos sem precisar contratar dublador. A qualidade é surpreendente!"
+        },
+        {
+          "name": "LF",
+          "username": "@lucasferreira",
+          "platform": "Twitter",
+          "text": "Testei várias IAs de voz e o DarkVoice é disparado o melhor. Totalmente local, sem mensalidades. Vale cada centavo!"
+        },
+        {
+          "name": "MC",
+          "username": "@mariacosta",
+          "platform": "YouTube",
+          "text": "Economizei horas de gravação! Agora posso criar conteúdo muito mais rápido. A voz fica natural demais."
+        },
+        {
+          "name": "BL",
+          "username": "@brunolima",
+          "platform": "Twitch",
+          "text": "Uso para narrar minhas lives e os viewers acham que é minha voz real. A qualidade é impressionante!"
+        },
+        {
+          "name": "CS",
+          "username": "@carolsilva",
+          "platform": "Instagram",
+          "text": "Perfeito para criar reels e stories com narração profissional. Meu engajamento aumentou muito!"
+        },
+        {
+          "name": "PA",
+          "username": "@pedroalves",
+          "platform": "Discord",
+          "text": "Como produtor de conteúdo, isso mudou meu workflow. Posso criar áudios em minutos ao invés de horas."
+        }
+      ]
+    },
+    "pricing_section": {
+      "title": "Sem plano mensal e preço único",
+      "price": "R$ 297",
+      "price_desc": "Pagamento único • Sem mensalidades",
+      "features": [
+        "Pague uma única vez e use sem limites",
+        "Licença vitalícia para uso pessoal e criação de conteúdo",
+        "Clonagem de vozes similares",
+        "Narrações limitadas para vídeos, podcasts e cursos",
+        "Sem assinatura, sem cobranças recorrentes",
+        "Atualizações inclusas"
+      ],
+      "buy_button": "Comprar por R$ 297",
+      "guarantee": "Compra segura pela Kiwify • Garantia de 7 dias"
+    },
+    "pricing_features": [
+      "Pague uma única vez e use sem limites",
+      "Licença vitalícia para uso pessoal e criação de conteúdo",
+      "Clonagem de vozes similares",
+      "Narrações ilimitadas para vídeos, podcasts e cursos",
+      "Sem assinatura, sem cobranças recorrentes",
+      "Atualizações inclusas"
+    ],
+    "requirements_section": {
+      "title": "Requisitos mínimos",
+      "system": "Sistema",
+      "system_value": "Windows 10/11",
+      "cpu": "CPU",
+      "cpu_value": "Quad-core 64-bit",
+      "gpu": "GPU",
+      "gpu_value": "NVIDIA CUDA Core (GTX 1060 ou superior)",
+      "ram": "RAM",
+      "ram_value": "8GB (mínimo)",
+      "storage": "Armazenamento",
+      "storage_value": "10GB (espaço)"
+    },
+    "footer": {
+      "description": "IA de Clonagem de Voz totalmente local. Crie narrações realistas para seus projetos com privacidade total.",
+      "quick_links": "Links Rápidos",
+      "faq_title": "FAQ",
+      "faq_1": "Como funciona a garantia?",
+      "faq_2": "Preciso de GPU potente?",
+      "faq_3": "Funciona offline?",
+      "faq_4": "Posso usar comercialmente?",
+      "faq_5": "Como recebo atualizações?",
+      "contact_title": "Contato",
+      "contact_email": "suporte@darkvoice.com",
+      "contact_phone": "(00) 00000-0000",
+      "contact_hours": "Seg-Sex: 9h-18h",
+      "copyright": "© 2025 DarkVoice. Todos os direitos reservados.",
+      "terms": "Termos de Uso",
+      "privacy": "Política de Privacidade",
+      "refund": "Política de Reembolso",
+      "developed_by": "Desenvolvido por"
+    },
+    "advantages_title": "Vantagens do DarkVoice",
+    "adv1_title": "Sem mensalidades",
+    "adv1_desc": "Clone e use, sem limites de uso",
+    "adv2_title": "100% totalmente local",
+    "adv2_desc": "Nada sai do seu computador",
+    "adv3_title": "Privacidade total",
+    "adv3_desc": "Arquivos e dados não são enviados",
+    "pricing_title": "Sem plano mensal e preço único",
+    "price": "R$ 297",
+    "price_desc": "Pagamento único • Sem mensalidades",
+    "buy_button": "Quero ter o DarkVoice",
+    "guarantee": "Compra segura com garantia de 7 dias",
+    "requirements_title": "Requisitos mínimos",
+    "req_os": "Windows 10/11",
+    "req_cpu": "Quad-core 64-bit",
+    "req_gpu": "NVIDIA CUDA Core (GTX 1060 ou superior)",
+    "req_ram": "8GB (mínimo)",
+    "req_storage": "10GB (mínimo)"
+  },
+  "login": {
+    "title": "Entrar na sua conta",
+    "email_placeholder": "Seu e-mail",
+    "password_placeholder": "Sua senha",
+    "forgot_password": "Esqueceu a senha?",
+    "login_button": "Entrar",
+    "no_account": "Não tem uma conta?",
+    "buy_now": "Comprar agora",
+    "error_invalid": "E-mail ou senha inválidos",
+    "error_empty": "Preencha todos os campos"
+  },
+  "recover": {
+    "title": "Recuperar senha",
+    "description": "Digite seu e-mail para receber instruções de recuperação",
+    "email_placeholder": "Seu e-mail",
+    "send_button": "Enviar instruções",
+    "back_to_login": "Voltar para o login",
+    "success": "Instruções enviadas para seu e-mail!",
+    "error": "Erro ao enviar instruções. Tente novamente."
+  },
+  "members": {
+    "title": "Bem-vindo ao DarkVoice",
+    "description": "Domine a arte da clonagem de voz com IA. Aprenda técnicas profissionais e crie narrações realistas.",
+    "progress": "Seu Progresso no Curso",
+    "modules": "Módulos",
+    "lessons": "Aulas",
+    "completed": "Concluída",
+    "locked": "Bloqueada",
+    "unlock_in": "Libera em",
+    "days": "dias",
+    "bonus": "Bônus",
+    "admin_dropdown": {
+      "dashboard": "Dashboard",
+      "dashboard_desc": "Gerenciar usuários",
+      "panel": "Painel Admin",
+      "panel_desc": "Gerenciar cursos e aulas"
+    }
+  },
+  "lesson": {
+    "mark_complete": "Marcar como Concluída",
+    "completed": "Aula Concluída!",
+    "duration": "Duração",
+    "minutes": "minutos",
+    "materials": "Materiais de Apoio",
+    "download": "Baixar",
+    "comments": "Comentários",
+    "no_comments": "Nenhum comentário ainda. Seja o primeiro!",
+    "add_comment": "Adicionar Comentário",
+    "your_comment": "Escreva seu comentário aqui...",
+    "your_rating": "Sua Avaliação",
+    "submit": "Enviar Comentário",
+    "navigation": {
+      "previous": "Aula Anterior",
+      "next": "Próxima Aula"
+    }
+  },
+  "change_password": {
+    "title": "Primeiro Acesso - Criar Senha Permanente",
+    "description": "Você está usando uma senha temporária. Por segurança, crie uma senha permanente agora.",
+    "temp_password": "Senha Temporária",
+    "new_password": "Nova Senha Permanente",
+    "confirm_password": "Confirmar Nova Senha",
+    "requirements": "A senha deve ter no mínimo 8 caracteres",
+    "button": "Criar Senha Permanente",
+    "error_match": "As senhas não coincidem",
+    "error_length": "A senha deve ter no mínimo 8 caracteres",
+    "success": "Senha alterada com sucesso!"
+  }
+}
+

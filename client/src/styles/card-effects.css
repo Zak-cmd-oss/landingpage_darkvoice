@@ -1,0 +1,245 @@
+/* ========================================
+   EFEITOS DINÂMICOS PARA CARDS
+   ======================================== */
+
+/* ===== CARDS "COMO FUNCIONA" (1, 2, 3) ===== */
+
+/* Hover Scale + Glow */
+.card-how-it-works {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.card-how-it-works:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(var(--primary-rgb, 34, 197, 94), 0.5);
+  border-color: rgb(var(--primary-rgb, 34, 197, 94));
+}
+
+/* Tilt Effect 3D */
+.card-how-it-works {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-how-it-works:hover {
+  transform: scale(1.05) translateY(-8px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Stagger Animation (aparecem em sequência) */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-how-it-works-1 {
+  animation: slideUpFade 0.6s ease-out 0.1s both;
+}
+
+.card-how-it-works-2 {
+  animation: slideUpFade 0.6s ease-out 0.3s both;
+}
+
+.card-how-it-works-3 {
+  animation: slideUpFade 0.6s ease-out 0.5s both;
+}
+
+/* ===== CARDS "VANTAGENS" ===== */
+
+/* Slide Up on Scroll */
+@keyframes slideUpVantagens {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-vantagens {
+  animation: slideUpVantagens 0.8s ease-out both;
+  transition: all 0.3s ease;
+}
+
+.card-vantagens:nth-child(1) { animation-delay: 0.1s; }
+.card-vantagens:nth-child(2) { animation-delay: 0.2s; }
+.card-vantagens:nth-child(3) { animation-delay: 0.3s; }
+
+/* Pulse Border */
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgba(var(--primary-rgb, 34, 197, 94), 0.3);
+    box-shadow: 0 0 0 rgba(var(--primary-rgb, 34, 197, 94), 0);
+  }
+  50% {
+    border-color: rgba(var(--primary-rgb, 34, 197, 94), 0.8);
+    box-shadow: 0 0 20px rgba(var(--primary-rgb, 34, 197, 94), 0.4);
+  }
+}
+
+.card-vantagens {
+  animation: slideUpVantagens 0.8s ease-out both, pulseBorder 3s ease-in-out infinite;
+}
+
+/* Rotate Icon on Hover */
+.card-vantagens:hover .card-icon {
+  transform: rotate(360deg) scale(1.2);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.card-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* ===== CARD DE PREÇO (R$ 297) ===== */
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.card-pricing {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card-pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+/* Shadow Elevation on Hover */
+.card-pricing:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(var(--primary-rgb, 34, 197, 94), 0.6),
+    inset 0 0 60px rgba(var(--primary-rgb, 34, 197, 94), 0.1);
+}
+
+/* Button Pulse */
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(var(--primary-rgb, 34, 197, 94), 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(var(--primary-rgb, 34, 197, 94), 0);
+  }
+}
+
+.card-pricing .btn-buy {
+  animation: buttonPulse 2s infinite;
+}
+
+/* ===== CARDS DE DEPOIMENTOS ===== */
+
+/* Slide from Side on Scroll */
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card-testimonial {
+  transition: all 0.3s ease;
+}
+
+.card-testimonial:nth-child(odd) {
+  animation: slideFromLeft 0.8s ease-out both;
+}
+
+.card-testimonial:nth-child(even) {
+  animation: slideFromRight 0.8s ease-out both;
+}
+
+.card-testimonial:nth-child(1) { animation-delay: 0.1s; }
+.card-testimonial:nth-child(2) { animation-delay: 0.2s; }
+.card-testimonial:nth-child(3) { animation-delay: 0.3s; }
+.card-testimonial:nth-child(4) { animation-delay: 0.4s; }
+.card-testimonial:nth-child(5) { animation-delay: 0.5s; }
+.card-testimonial:nth-child(6) { animation-delay: 0.6s; }
+
+/* Glow Avatar on Hover */
+.card-testimonial:hover .avatar {
+  box-shadow: 
+    0 0 20px rgba(var(--primary-rgb, 34, 197, 94), 0.6),
+    0 0 40px rgba(var(--primary-rgb, 34, 197, 94), 0.4);
+  transform: scale(1.1);
+}
+
+.card-testimonial .avatar {
+  transition: all 0.3s ease;
+}
+
+/* Hover Scale Suave */
+.card-testimonial:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== EFEITOS GERAIS ===== */
+
+/* Smooth Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Glow Universal */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(var(--primary-rgb, 34, 197, 94), 0.5);
+  border-color: rgb(var(--primary-rgb, 34, 197, 94));
+}
+
